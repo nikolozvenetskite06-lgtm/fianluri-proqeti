@@ -3,29 +3,50 @@ a {
 }
 a:hover {
     color: aqua;
-    font-size: 20px;
+    font-size: 30px;
     
 }
 nav {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-    font-size: 16px;
+    font-size: 25px;
 }
 header {
     background-color: gray;
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(68, 59, 59, 0);
-    box-sizing: border-box
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 nav > a {
     color: white;
     font-weight: bold;
 }
+
+.site-brand {
+    color: white;
+    font-weight: 800px;
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 95%;
+    max-width: 1600px; 
     margin: 30px auto;
+}
+
+
+body {
+    background-image: url("./images/images (9).jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 
@@ -49,15 +70,15 @@ nav > a {
 
 
 .movies-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 24px;
+    justify-items: stretch;
+    align-items: start;
     margin: 18px 0 40px 0;
 }
 
 .movie-card {
-    width: 300px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -65,6 +86,8 @@ nav > a {
     box-shadow: 0 8px 18px rgba(0,0,0,0.06);
     transition: transform 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.28s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 .movie-card:hover { transform: translateY(-8px) scale(1.04); box-shadow: 0 20px 40px rgba(0,0,0,0.16); }
 .movie-card img { display:block; width:100%; height:180px; object-fit:cover; }
@@ -76,11 +99,13 @@ nav > a {
 
 @media (max-width:800px) {
     .hero-image { width: 260px; }
+    .movies-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width:600px) {
     .intro { flex-direction: column; }
     .hero-image { width: 100%; }
-    .movie-card { width: calc(50% - 12px); }
+    .movie-card { /* full width inside grid */ }
+    .movies-grid { grid-template-columns: 1fr; }
 }
 @media (max-width:420px) {
     .movie-card { width: 100%; }
@@ -180,4 +205,77 @@ footer {
 
 .footer-bottom a:hover {
     color: #fff;
+}
+
+
+.movies-grid::after { content: ""; display: table; clear: both; }
+img { max-width: 100%; height: auto; display: block; }
+
+
+.info {
+    width: 700px;
+    height: 200px;
+    max-width: 100%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    background-color: gray;
+    color: white;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.info img {
+    width: 200px;
+    height: auto;
+    flex: 0 0 140px;
+    border-radius: 6px;
+}
+
+
+.reklaama {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 30px;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+}
+.reklaama .reklaama-content { max-width: 1200px; text-align: center; padding: 0 20px; }
+.reklaama h3 { margin: 0 0 8px 0; font-size: 26px; }
+.reklaama p { margin: 0; line-height: 1.6; }
+
+@media (max-width:800px) {
+    .reklaama h3 { font-size: 20px; }
+}
+
+
+.site-footer {
+    background: #263243; 
+    color: #cbd6df;
+    padding: 28px 0;
+}
+.site-footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.footer-links ul { list-style: none; padding: 0; margin: 0; }
+.footer-links ul li { margin-bottom: 8px; }
+.footer-links ul li a { color: #9fb0c0; font-size: 12px; text-decoration: none; }
+.footer-cta { text-align: center; flex: 1; color: #dfeaf6; font-size: 14px; }
+.footer-brand img { width: 56px; height: auto; }
+
+@media (max-width:800px) {
+    .site-footer .footer-content { flex-direction: column; gap: 12px; text-align: center; }
+    .footer-links ul li { display: inline-block; margin: 0 8px; }
 }
