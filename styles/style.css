@@ -42,12 +42,8 @@ nav > a {
 
 body {
     background-image: url("./images/images (9).jfif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
 }
+    
 
 
 .intro {
@@ -67,7 +63,9 @@ body {
 }
 .hero-text { flex: 1; }
 .hero-text p {
-     margin: 0 0 10px 0; line-height: 1.6; color: #222; text-align: justify; }
+    font-family: monospace;
+     
+     }
 
 
 .movies-grid {
@@ -86,7 +84,6 @@ body {
     border: 1px solid #e6e6e6;
     box-shadow: 0 8px 18px rgba(0,0,0,0.06);
     transition: transform 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.28s ease;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
 }
