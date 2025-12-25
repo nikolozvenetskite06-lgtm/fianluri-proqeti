@@ -70,7 +70,7 @@ body {
 
 .movies-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 24px;
     justify-items: stretch;
     align-items: start;
@@ -115,7 +115,7 @@ body {
 @media (max-width:600px) {
     .intro { flex-direction: column; }
     .hero-image { width: 100%; }
-    .movie-card { /* full width inside grid */ }
+    .movie-card {  }
     .movies-grid { grid-template-columns: 1fr; }
 }
 @media (max-width:420px) {
@@ -219,8 +219,12 @@ footer {
 }
 
 
-.movies-grid::after { content: ""; display: table; clear: both; }
-img { max-width: 100%; height: auto; display: block; }
+.movies-grid::after {
+     content: ""; display: table; clear: both;
+     }
+img { 
+    max-width: 100%; height: auto; display: block; 
+}
 
 
 .info {
@@ -256,10 +260,18 @@ img { max-width: 100%; height: auto; display: block; }
     margin-top: 30px;
     background: rgba(0,0,0,0.45);
     color: #fff;
+    background-color: black;
 }
-.reklaama .reklaama-content { max-width: 1200px; text-align: center; padding: 0 20px; }
-.reklaama h3 { margin: 0 0 8px 0; font-size: 26px; }
-.reklaama p { margin: 0; line-height: 1.6; }
+.reklaama .reklaama-content {
+     max-width: 1200px; text-align: center; padding: 0 20px; 
+    }
+.reklaama h3 {
+     margin: 0 0 8px 0; font-size: 26px;
+     }
+.reklaama p {
+     margin: 0; line-height: 1.6;
+     color: red;
+     }
 
 @media (max-width:800px) {
     .reklaama h3 { font-size: 20px; }
