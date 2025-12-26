@@ -169,12 +169,20 @@ body {
      text-align:center; padding:18px 0 40px; color:#666; }
 
 @media (max-width:800px) {
-  .hero-image { width: 260px; flex: 0 0 260px; }
-    .movies-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-image { width: 260px;
+     flex: 0 0 260px;
+     }
+    .movies-grid {
+       grid-template-columns: repeat(2, 1fr); 
+      }
 }
 @media (max-width:600px) {
-  .intro { flex-direction: column; gap: 18px; padding: 20px; }
-  .hero-image { width: 100%; max-width: 420px; flex: 0 0 auto; }
+  .intro { flex-direction: column;
+  gap: 18px;
+     padding: 20px; }
+  .hero-image { width: 100%;
+     max-width: 420px;
+      flex: 0 0 auto; }
     .movie-card {  }
     .movies-grid { grid-template-columns: 1fr; }
 }
