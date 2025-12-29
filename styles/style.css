@@ -42,7 +42,7 @@ nav > a {
 
 
 body {
-    background-color: #d3d3d3;
+    background-color: black
 }
     
 
@@ -404,6 +404,10 @@ img {
   .footer-section {
     margin-bottom: 30px;
   }
+}
+.fa-champagne-glasses {
+  font-size: 40px;
+  color: white;
 }
 
 
